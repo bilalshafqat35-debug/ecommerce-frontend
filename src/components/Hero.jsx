@@ -11,9 +11,9 @@ const Hero = () => {
 
   return (
     <section className="bg-white border border-shade-border rounded-lg mt-6 overflow-hidden">
-      <div className="flex p-4 gap-4 h-[400px]">
-        {/* Left Categories */}
-        <div className="w-64 flex-shrink-0">
+      <div className="flex flex-col lg:flex-row p-4 gap-4 lg:h-[400px]">
+        {/* Left Categories - mobile pe chhupa, desktop pe dikhega */}
+        <div className="hidden lg:block w-64 flex-shrink-0">
           <ul className="space-y-1">
             {categories.map((cat, index) => (
               <li 
@@ -28,12 +28,12 @@ const Hero = () => {
 
         {/* Main Banner */}
         <div 
-          className="flex-1 relative rounded-lg p-10 flex flex-col justify-center bg-cover bg-no-repeat bg-center"
+          className="flex-1 relative rounded-lg p-6 lg:p-10 flex flex-col justify-center bg-cover bg-no-repeat bg-center min-h-[240px] lg:min-h-0"
           style={{ backgroundImage: `url("${bannerImg}")` }}
         >
-           <div className="relative z-10 w-1/2">
-             <h3 className="text-2xl font-normal text-dark mb-1">Latest trending</h3>
-             <h2 className="text-[32px] font-bold text-dark leading-tight mb-6">Electronic items</h2>
+           <div className="relative z-10 w-full sm:w-2/3 lg:w-1/2">
+             <h3 className="text-xl lg:text-2xl font-normal text-dark mb-1">Latest trending</h3>
+             <h2 className="text-2xl lg:text-[32px] font-bold text-dark leading-tight mb-6">Electronic items</h2>
              <button className="bg-white text-dark px-6 py-2 rounded-md font-medium hover:bg-shade transition-colors shadow-sm">
                Learn more
              </button>
@@ -41,7 +41,7 @@ const Hero = () => {
         </div>
 
         {/* Right Sidebar */}
-        <div className="w-60 flex flex-col gap-3">
+        <div className="w-full lg:w-60 flex flex-col gap-3">
           {/* Welcome Box */}
           <div className="bg-[#E3F0FF] p-4 rounded-lg">
             <div className="flex items-center gap-3 mb-4">
@@ -59,7 +59,7 @@ const Hero = () => {
 
           {/* Promo 1 */}
           <div 
-            className="bg-orange p-3 rounded-lg flex-1 text-white bg-cover bg-no-repeat bg-center cursor-pointer hover:opacity-90 transition-opacity"
+            className="bg-orange p-3 rounded-lg flex-1 min-h-[90px] text-white bg-cover bg-no-repeat bg-center cursor-pointer hover:opacity-90 transition-opacity"
             style={{ backgroundImage: `url("${promo1}")` }}
           >
             <p className="text-sm font-normal leading-tight w-2/3">Get US $10 off with a new supplier</p>
@@ -67,7 +67,7 @@ const Hero = () => {
 
           {/* Promo 2 */}
           <div 
-            className="bg-teal p-3 rounded-lg flex-1 text-white bg-cover bg-no-repeat bg-center cursor-pointer hover:opacity-90 transition-opacity"
+            className="bg-teal p-3 rounded-lg flex-1 min-h-[90px] text-white bg-cover bg-no-repeat bg-center cursor-pointer hover:opacity-90 transition-opacity"
             style={{ backgroundImage: `url("${promo2}")` }}
           >
             <p className="text-sm font-normal leading-tight w-2/3">Send quotes with supplier preferences</p>

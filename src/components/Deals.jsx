@@ -15,9 +15,9 @@ const Deals = ({ setPage }) => {
   ];
 
   return (
-    <section className="bg-white border border-[#DEE2E7] rounded-lg mt-6 flex overflow-hidden">
+    <section className="bg-white border border-[#DEE2E7] rounded-lg mt-6 flex flex-col lg:flex-row overflow-hidden">
       {/* Timer Section */}
-      <div className="w-72 p-6 border-r border-[#DEE2E7] flex flex-col justify-center">
+      <div className="w-full lg:w-72 p-6 border-b lg:border-b-0 lg:border-r border-[#DEE2E7] flex flex-col justify-center">
         <h3 className="text-xl font-bold text-dark mb-1">Deals and offers</h3>
         <p className="text-secondary mb-4 font-normal">Hygiene equipments</p>
         <div className="flex gap-2">
@@ -33,7 +33,7 @@ const Deals = ({ setPage }) => {
       </div>
 
       {/* Deals Grid */}
-      <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 h-full">
+      <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {deals.map((deal, index) => (
           <div
             key={index}

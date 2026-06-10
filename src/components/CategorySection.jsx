@@ -5,7 +5,7 @@ const CategorySection = ({ title, bannerImg, items, bannerBg }) => {
     <section className="bg-white border border-[#DEE2E7] rounded-lg mt-6 flex flex-col lg:flex-row overflow-hidden">
       {/* Banner */}
       <div
-        className="w-72 p-6 flex flex-col justify-start relative overflow-hidden bg-cover bg-no-repeat"
+        className="w-full lg:w-72 p-6 flex flex-col justify-start relative overflow-hidden bg-cover bg-no-repeat border-b lg:border-b-0 border-[#DEE2E7] min-h-[160px] lg:min-h-0"
         style={{ backgroundColor: bannerBg || '#F7F7F7', backgroundImage: `url("${bannerImg}")` }}
       >
         <div className="relative z-10">
