@@ -75,7 +75,7 @@ const ProductListing = ({ setPage, setProductId, searchQuery }) => {
 
       <div className="flex gap-6">
         {/* Sidebar Filters */}
-        <aside className="w-[240px] flex-shrink-0 space-y-2">
+        <aside className="hidden lg:block w-[240px] flex-shrink-0 space-y-2">
           {/* Category */}
           <div className="border-t border-[#DEE2E7] py-3">
             <h4 className="font-bold text-[#1C1C1C] mb-3 flex justify-between items-center cursor-pointer">
